@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   var KssStateGenerator;
   KssStateGenerator = (function() {
     function KssStateGenerator() {
@@ -37,26 +37,4 @@
     return KssStateGenerator;
   })();
   new KssStateGenerator;
-}).call(this);
-
-// (function() {
-//   getStyle = function(className) {
-//     for (var i = 0; i < document.styleSheets.length; i++) {
-//       var classes = document.styleSheets[i].rules || document.styleSheets[i].cssRules
-//       for(var x = 0; x < classes.length; x++) {
-//         if(classes[x].selectorText && classes[x].selectorText.indexOf(className) > -1) {
-//           var text = classes[x].cssText || classes[x].style.cssText;
-//           console.log("FOUND IN" + i)
-//           return text;
-//         }
-//       }
-//     }
-//   }
-
-
-//   console.log('getting .button');
-
-//   console.log(getStyle('button:hover'));
-//   // console.log('getting .button:hover');
-//   // getStyle('.button:hover');
-// })();
+})();
