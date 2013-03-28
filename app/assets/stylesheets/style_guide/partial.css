@@ -1,3 +1,20 @@
+.style-guide-group {
+  padding:10px 0 0;
+  border-top: 1px solid #eee;
+  position: relative;
+}
+.style-guide-group:after {
+  content: attr(title);
+  position: absolute;
+  top:-1px;
+  right: 0;
+  color:#888;
+  background: #f9f9f9;
+  border:1px solid #eee;
+  padding:5px 15px;
+  font-size:11px;
+}
+
 .style-guide-partial {
   padding-top: 30px;
   background-color: white;
@@ -139,9 +156,4 @@ pre.style-guide-partial-source {
 .style-guide-partial > input:checked + label .style-guide-toggle.hide,
 .style-guide-partial > input:checked + label .style-guide-partial-source {
   display: block;
-}
-
-.style-guide-partial .style-guide-partial-rendered > * {
-  float: none;
-  position: relative;
 }
