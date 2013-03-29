@@ -2,7 +2,7 @@
   <%= render :partial => "sidebar", :locals => {:section => @current_section} %>
 
   <div class="style-guide-partials">
-    <% @current_section.partials.each do |partial| %>
+    <% @current_section.partials(self).each do |partial| %>
       <%= render :partial => "partial", :locals => {:partial => partial} %>
     <% end %>
   </div>

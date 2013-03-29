@@ -1,4 +1,6 @@
-StyleGuide::Engine.routes.draw do
-  root :to => "style#index"
-  match "/:id" => "style#show", :as => :style
+Rails.application.routes.draw do
+  namespace :style_guide, path: 'style-guide' do
+    root to: "style#index"
+    get "/:id" => "style#show", :as => :section
+  end
 end

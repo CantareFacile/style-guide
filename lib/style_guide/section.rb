@@ -26,8 +26,8 @@ module StyleGuide
       @title ||= File.basename(path).titleize
     end
 
-    def partials
-      partial_paths.map { |path| StyleGuide::Partial.new(path, self) }.sort_by { |p| p.title }
+    def partials(view_context)
+      partial_paths.map { |path| StyleGuide::Partial.new(path, self, view_context) }.sort_by { |p| p.title }
     end
 
     private

@@ -2,8 +2,9 @@ require "spec_helper"
 
 describe StyleGuide::Partial do
   let(:path) { "/hygenic/_gargling.erb" }
+  let(:mock_view) { double(:view, :render => "hi") }
   let(:section) { StyleGuide::Section.from_paths("/flaky/gangrene").first }
-  let(:partial) { StyleGuide::Partial.new(path, section) }
+  let(:partial) { StyleGuide::Partial.new(path, section, mock_view) }
 
   describe "#title" do
     subject { partial.title }
@@ -109,7 +110,6 @@ describe StyleGuide::Partial do
   end
 
   describe "#render" do
-    let(:mock_view) { double(:view, :render => "hi") }
 
     before { partial.stub(:action_view).and_return(mock_view) }
 

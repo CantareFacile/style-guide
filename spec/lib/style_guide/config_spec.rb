@@ -54,7 +54,7 @@ describe StyleGuide::Config do
     end
 
     context "when adding a globbed path" do
-      let(:path) { StyleGuide::Engine.root.join("app", "views", "layouts", "*") }
+      let(:path) { StyleGuide::Engine.root.join("app", "views", "style_guide", "*") }
 
       it "obeys globbing" do
         expect do

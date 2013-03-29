@@ -1,5 +1,5 @@
 <div class="style-guide-sidebar style-guide-fixed">
-  <% section.partials.each do |partial| %>
+  <% section.partials(self).each do |partial| %>
   <div class="style-guide-sidebar-partial">
     <a href="#<%= partial.id %>">
       <i>&rsaquo;</i>

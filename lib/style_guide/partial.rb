@@ -3,11 +3,12 @@ require "github/markdown"
 
 module StyleGuide
   class Partial
-    attr_reader :path, :section
+    attr_reader :path, :section, :view_context
 
-    def initialize(path, section)
-      @path = path
+    def initialize(path, section, view_context)
+      @path = Pathname.new(path)
       @section = section
+      @view_context = view_context
     end
 
     def id
@@ -15,7 +16,7 @@ module StyleGuide
     end
 
     def title
-      @title ||= File.basename(path, File.extname(path)).titleize.strip
+      @title ||= path.basename(path.extname).to_s.titleize.strip
     end
 
     def description
@@ -43,14 +44,10 @@ module StyleGuide
     end
 
     def render
-      @render ||= action_view.render(:file => path)
+      @render ||= view_context.render(:file => path.dirname.join(path.basename(path.extname)))
     end
 
     private
-
-    def action_view
-      ActionView::Base.new(Rails.root.join("app", "views"))
-    end
 
     def style_guide_scope
       [:style_guide, section.id.to_sym]
