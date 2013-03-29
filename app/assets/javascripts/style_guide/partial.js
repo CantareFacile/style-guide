@@ -1,6 +1,4 @@
 ;(function() {
-  var $forms = document.querySelectorAll(".style-guide-partial form");
-  var $links = document.querySelectorAll(".style-guide-partial [href]");
   var $sources = document.querySelectorAll(".style-guide-partial-source");
 
   function eventDefaultPreventer(event) {
@@ -13,7 +11,5 @@
     }
   }
 
-  preventDefaultOnClick($forms);
-  preventDefaultOnClick($links);
   preventDefaultOnClick($sources);
 })();
