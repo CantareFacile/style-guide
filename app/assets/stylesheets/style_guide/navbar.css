@@ -112,9 +112,3 @@
     color: #888;
   }
 }
-
-@media (min-width: 960px) {
-  .style-guide-bar-container {
-    width: 960px;
-  }
-}
