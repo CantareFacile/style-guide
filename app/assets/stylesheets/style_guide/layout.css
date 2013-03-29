@@ -27,7 +27,7 @@
 
   .style-guide-content .style-guide-sidebar.style-guide-fixed {
     position: fixed;
-    top: 0;
+    top: 40px;
     width: 144px;
   }
 
