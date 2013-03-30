@@ -12,6 +12,7 @@
     <%= stylesheet_link_tag    *@application_css %>
     <%= stylesheet_link_tag    "style_guide/application" %>
     <%= javascript_include_tag "style_guide/application" %>
+    <%= yield :head %>
   </head>
   <body class="style-guide">
     <div class="style-guide-bar">
