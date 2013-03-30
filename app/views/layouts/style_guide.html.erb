@@ -11,6 +11,7 @@
 
     <%= stylesheet_link_tag    *@application_css %>
     <%= stylesheet_link_tag    "style_guide/application" %>
+    <%= javascript_include_tag "style_guide/application" %>
   </head>
   <body class="style-guide">
     <div class="style-guide-bar">
@@ -28,6 +29,5 @@
     </div>
 
 <%= yield %>
-  <%= javascript_include_tag "style_guide/application" %>
   </body>
 </html>

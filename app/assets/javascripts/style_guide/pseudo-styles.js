@@ -1,4 +1,4 @@
-;(function() {
+$(function() {
   var KssStateGenerator;
   KssStateGenerator = (function() {
     function KssStateGenerator() {
@@ -39,4 +39,4 @@
     return KssStateGenerator;
   })();
   new KssStateGenerator;
-})();
+});

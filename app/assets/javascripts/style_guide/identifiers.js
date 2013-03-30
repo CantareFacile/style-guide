@@ -1,4 +1,4 @@
-;(function(){
+$(function(){
   var $identifiers = document.querySelectorAll(".style-guide-partial-identifiers code");
   var highlightPattern = new RegExp('(\\s|^)style-guide-identifier-highlight(\\s|$)');
 
@@ -33,4 +33,4 @@
   }
 
   highlightOnHover($identifiers);
-})();
+});

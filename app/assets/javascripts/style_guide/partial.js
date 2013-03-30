@@ -1,4 +1,4 @@
-;(function() {
+$(function() {
   var $sources = document.querySelectorAll(".style-guide-partial-source");
 
   function eventDefaultPreventer(event) {
@@ -12,4 +12,4 @@
   }
 
   preventDefaultOnClick($sources);
-})();
+});
