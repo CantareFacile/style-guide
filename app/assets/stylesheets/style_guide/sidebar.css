@@ -7,7 +7,6 @@
      -moz-box-shadow: 0 1px 4px rgba(0,0,0,.1);
           box-shadow: 0 1px 4px rgba(0,0,0,.1);
 }
-
 .style-guide-sidebar-partial + .style-guide-sidebar-partial {
   border-top: 1px solid #ddd;
 }
@@ -16,8 +15,9 @@
   color: #888;
   text-decoration: none;
   font-size: 14px;
-  line-height: 25px;
-  padding: 5px 15px;
+  padding: 0 15px;
+  line-height: 35px;
+  height: 35px;
   display: block;
 }
 
@@ -25,7 +25,8 @@
   font-style: normal;
   float: right;
   font-size: 30px;
-  line-height: 18px;
+  line-height: 35px;
+  height: 35px;
   color: #ddd;
 }
 
@@ -35,6 +36,17 @@
 
 .style-guide-sidebar a:hover i {
   color: #888;
+}
+.style-guide-sidebar-toggler {
+  border-top:1px solid #ddd;
+}
+.style-guide-sidebar-toggler a {
+  padding: 8px 15px;
+  text-align: right;
+  display: block;
+  font-size: 30px;
+  line-height: 18px;
+  font-weight: normal;
 }
 
 @media (min-width: 720px) {

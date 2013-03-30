@@ -12,26 +12,42 @@
   margin: 0 auto;
 }
 
+.style-guide-sidebar.closed,
+.style-guide-sidebar.style-guide-fixed.closed {
+  width: 43px;
+  overflow: hidden;
+}
+.style-guide-sidebar.closed span {
+  overflow: hidden;
+  visibility: hidden;
+  width:43px;
+}
+.style-guide-partials.large {
+  width: auto;
+  margin-left: 60px;
+  float: none;
+}
+
 @media (min-width: 720px) {
   .style-guide-content {
       position: relative;
    }
 
-  .style-guide-content .style-guide-sidebar {
+  .style-guide-sidebar {
     width: 20%;
   }
 
-  .style-guide-content .style-guide-sidebar {
+  .style-guide-sidebar {
     position: absolute;
   }
 
-  .style-guide-content .style-guide-sidebar.style-guide-fixed {
+  .style-guide-sidebar.style-guide-fixed {
     position: fixed;
     top: 40px;
     width: 144px;
   }
 
-  .style-guide-content .style-guide-partials {
+  .style-guide-partials {
     width: 79%;
     margin-left: 21%;
     float: left;
@@ -39,17 +55,17 @@
 }
 
 @media (min-width: 840px) {
-  .style-guide-content .style-guide-sidebar {
+  .style-guide-sidebar {
     width: 25%;
   }
 
-  .style-guide-content .style-guide-partials {
+  .style-guide-partials {
     width: 74%;
     margin-left: 26%;
     float: left;
   }
 
-  .style-guide-content .style-guide-sidebar.style-guide-fixed {
+  .style-guide-sidebar.style-guide-fixed {
     width: 210px;
   }
 }
@@ -59,17 +75,17 @@
     width: 960px;
   }
 
-  .style-guide-content .style-guide-sidebar {
+  .style-guide-sidebar {
     width: 30%;
   }
 
-  .style-guide-content .style-guide-partials {
+  .style-guide-partials {
     width: 69%;
     margin-left: 31%;
     float: left;
   }
 
-  .style-guide-content .style-guide-sidebar.style-guide-fixed {
+  .style-guide-sidebar.style-guide-fixed {
     width: 288px;
   }
 }

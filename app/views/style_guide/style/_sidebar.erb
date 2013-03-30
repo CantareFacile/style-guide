@@ -3,8 +3,11 @@
   <div class="style-guide-sidebar-partial">
     <a href="#<%= partial.id %>">
       <i>&rsaquo;</i>
-      <%= partial.title %>
+      <span><%= partial.title %></span>
     </a>
   </div>
   <% end %>
+  <div class="style-guide-sidebar-toggler">
+    <a href="#" data-open="«" data-closed="»"></a>
+  </div>
 </div>
