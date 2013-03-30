@@ -9,6 +9,9 @@
   background-color: #f5f5f5;
   border-bottom:1px solid #DDD;
 }
+#style-guide-open-windows {
+  font-weight: bold;
+}
 
 .style-guide-bar-container {
   width: 100%;
