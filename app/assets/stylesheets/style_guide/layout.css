@@ -24,13 +24,15 @@
 }
 .style-guide-partials.large {
   width: auto;
-  margin-left: 60px;
   float: none;
 }
 
 @media (min-width: 720px) {
+  .style-guide-partials.large {
+    margin-left: 60px;
+  }
   .style-guide-content {
-      position: relative;
+    position: relative;
    }
 
   .style-guide-sidebar {
@@ -55,6 +57,9 @@
 }
 
 @media (min-width: 840px) {
+  .style-guide-partials.large {
+    margin-left: 60px;
+  }
   .style-guide-sidebar {
     width: 25%;
   }
@@ -71,6 +76,10 @@
 }
 
 @media (min-width: 960px) {
+  .style-guide-partials.large {
+    margin-left: 60px;
+  }
+
   .style-guide-content {
     width: 960px;
   }
