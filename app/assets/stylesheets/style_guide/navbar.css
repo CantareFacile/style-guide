@@ -68,6 +68,8 @@
 }
 .style-guide-bar-subsections {
   display: none;
+  max-width: 35em;
+  font-size: 90%;
 }
 .style-guide-bar-section.active
 .style-guide-bar-subsections {
@@ -115,6 +117,9 @@
     color: #888;
     display: block;
     padding: 10px;
+  }
+  .style-guide-bar-subsection a {
+    padding: 6px;
   }
 
   .style-guide-bar-section.active > a,
