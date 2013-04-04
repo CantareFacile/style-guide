@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Style Guide</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
 
     <%= stylesheet_link_tag    *@application_css %>
     <%= stylesheet_link_tag    "style_guide/application" %>
@@ -23,9 +19,18 @@
           <div class="style-guide-bar-section">
             <a href="#" id="style-guide-open-windows">Responsive</a>
           </div>
-        <% @sections.each_with_index do |section, index| %>
+        <% @sections.each do |section| %>
           <div class="style-guide-bar-section <%= (section == @current_section) ? 'active' : '' %>">
             <a href="<%= style_guide_section_path(section.id) %>"><%= section.title %></a>
+            <% if section.subsections.any? %>
+             <div class="style-guide-bar-subsections">
+              <% section.subsections.each do |subsection| %>
+                <div class="style-guide-bar-subsection <%= (subsection == @current_subsection) ? 'active' : '' %>">
+                  <a href="<%= style_guide_subsection_path(section_id: section.id, id: subsection.id) %>"><%= subsection.title %></a>
+                </div>
+              <% end %>
+              </div>
+            <% end %>
           </div>
         <% end %>
         </div>

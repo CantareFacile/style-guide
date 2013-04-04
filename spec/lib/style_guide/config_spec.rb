@@ -43,20 +43,10 @@ describe StyleGuide::Config do
       end
     end
 
-    context "when adding a non-globbed path" do
+    context "when adding a path" do
       let(:path) { StyleGuide::Engine.root.join("app", "views") }
 
-      it "only adds that base path" do
-        expect do
-          subject.paths << path
-        end.to change { subject.sections.count }.by(1)
-      end
-    end
-
-    context "when adding a globbed path" do
-      let(:path) { StyleGuide::Engine.root.join("app", "views", "style_guide", "*") }
-
-      it "obeys globbing" do
+      it "adds that base path" do
         expect do
           subject.paths << path
         end.to change { subject.sections.count }.by(1)
@@ -64,7 +54,7 @@ describe StyleGuide::Config do
     end
 
     context "when adding existing paths" do
-      let(:path) { StyleGuide::Engine.root.join("app", "views", "example", "**", "*") }
+      let(:path) { StyleGuide::Engine.root.join("app", "views", "example") }
 
       it "deduplicates existing paths" do
         expect do

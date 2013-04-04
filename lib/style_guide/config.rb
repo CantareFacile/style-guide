@@ -2,12 +2,12 @@ module StyleGuide
   class Config
     attr_reader :paths, :css_files
 
-    def self.example_glob
-      StyleGuide::Engine.root.join("app", "views", "example", "*")
+    def self.example_path
+      StyleGuide::Engine.root.join("app", "views", "example")
     end
 
     def initialize(options = {})
-      @paths = options[:paths] || [self.class.example_glob]
+      @paths = options[:paths] || [self.class.example_path]
       @css_files = ["application.css"]
     end
 
@@ -28,17 +28,13 @@ module StyleGuide
     end
 
     def sections
-      StyleGuide::Section.from_paths(expanded_paths)
+      StyleGuide::Section.from_paths(actual_paths)
     end
 
     private
 
-    def expanded_paths
-      globbed_paths.flatten.uniq.select(&:directory?)
-    end
-
-    def globbed_paths
-      paths.map { |path| Pathname.glob(path) }
+    def actual_paths
+      paths.map { |path| Pathname.glob(Pathname.new(path).join('*/')) }.flatten.uniq.select(&:directory?)
     end
   end
 end

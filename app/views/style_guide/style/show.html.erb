@@ -1,9 +1,15 @@
 <div class="style-guide-content">
-  <%= render :partial => "sidebar", :locals => {:section => @current_section} %>
+  <% if @section.partials? %>
+    <%= render :partial => "sidebar", :locals => {:section => @section} %>
 
-  <div class="style-guide-partials">
-    <% @current_section.partials(self).each do |partial| %>
-      <%= render :partial => "partial", :locals => {:partial => partial} %>
-    <% end %>
-  </div>
+    <div class="style-guide-partials">
+      <% @section.partials(self).each do |partial| %>
+        <%= render :partial => "partial", :locals => {:partial => partial} %>
+      <% end %>
+    </div>
+  <% else %>
+
+    <p> No partials found </p>
+
+  <% end %>
 </div>
