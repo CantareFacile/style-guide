@@ -16,7 +16,7 @@ $ ->
         return matched.replace(/\:/g, '.pseudo-class-')
 
       for stylesheet in document.styleSheets
-        if stylesheet.href.indexOf(document.domain) >= 0
+        if stylesheet.href && stylesheet.href.indexOf(document.domain) >= 0
           for rule in stylesheet.cssRules
             if (rule.type == CSSRule.STYLE_RULE) && pseudos.test(rule.selectorText)
               @insertRule(rule.cssText.replace(pseudos, replaceRule))
