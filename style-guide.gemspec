@@ -15,9 +15,9 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency "rails", ">= 3.2", "< 5.0"
-  s.add_dependency "nokogiri", "~> 1.5"
-  s.add_dependency "github-markdown", "~> 0.5"
-  s.add_dependency "jquery-rails", "~> 3.0"
+  s.add_dependency "nokogiri", ">= 1.5"
+  s.add_dependency "github-markdown", ">= 0.5"
+  s.add_dependency "jquery-rails", ">= 3.0"
 
   s.add_development_dependency "rspec-rails"
 end
